@@ -1,0 +1,54 @@
+<% if (messages.success) { %>
+  <div class="form-header">
+  <h1>Github Multi-Item Interactor!</h1>
+</div>
+  <div class="flash flash-success">Success! Paste below's code into your site/docs:</div>
+  <div class="flash"><%= messages.success %></div>
+
+<% } else { %>
+
+<div class="form-header">
+  <h1>Welcome to Github Telemetry Button Generator!</h1>
+  <h2>You can use this form to generate code for multiple GH buttons for your project.</h2>
+</div>
+<div class="form-header">
+  <% if (Object.keys(errors).length !== 0) { %>
+    <h2 class="errors-heading">Oops, please correct the following:</h2>
+    <ul class="errors-list">
+      <% Object.values(errors).forEach(error => { %>
+        <li><%= error.msg %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+</div>
+
+<form method="post" action="/" novalidate>
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+    <div class="form-field">
+    <label for="repo">Repository:</label>
+    <input class="input" id="repo" name="repo" type="text" value="" placeholder="dmitryvinn/tea-shop-flexbox" required>
+  </div> 
+
+  <div class="form-field">
+    <label for="showStars">Show Stars</label>
+      <input type="checkbox" id="showStars" name="showStars" value="close">
+  </div> 
+
+  <div class="form-field">
+    <label for="showWatchers">Show Watchers</label>
+      <input type="checkbox" id="showWatchers" name="showWatchers" value="close">
+  </div> 
+  <div class="form-field">
+    <label for="showForks">Show Forks</label>
+      <input type="checkbox" id="showForks" name="showForks" value="close">
+  </div> 
+
+  <div class="form-actions">
+    <button class="btn" type="submit">Generate Buttons</button>
+  </div>
+</form>
+<div class="form-footer">
+  <h4>See code available <a href="https://github.com/dmitryvinn/gh-telemetry-buttons">here</a>.</h4>
+</div>
+<% } %>
