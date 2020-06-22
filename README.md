@@ -22,7 +22,7 @@ Then, you can paste this code into your README.md and see the following:
 
 ## How to Use
 
-1) Go to a [Heroku instance of the app](https://gh-multi-interactor.herokuapp.com/)
+1) Go to a [Heroku instance of the app](https://gh-telemetry-buttons.herokuapp.com/)
 
 2) Enter repo name following a format: [ORG_NAME/REPO_NAME]. To illustrate, for "https://github.com/nodejs/node" only enter *"nodejs/node"*
 
