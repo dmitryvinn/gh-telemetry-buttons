@@ -3,9 +3,9 @@
 ## Overview
 
 This app helps users to quickly generate GitHub buttons representing the repo's telemetry:
-    * Stars
-    * Watchers
-    * Forks
+   * Stars
+   * Watchers
+   * Forks
 
 ## Example
 For [Deno GH project](https://github.com/denoland/deno), you can choose to show a button for Stars, Watchers and Forks:
